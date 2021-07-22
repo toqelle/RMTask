@@ -1,0 +1,114 @@
+/*=============== GOOGLE FONTS ===============*/
+@import "https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap";
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    --first-color: hsl(228, 42%, 37%);
+    --alt-color: hsl(120, 100%, 25%);
+    --white: hsl(0, 100%, 100%);
+    /*========== Font and typography ==========*/
+    --font-family: "Lato", sans-serif;
+    --title-font-size: 2.5rem;
+    --normal-font-size: 1.7rem;
+    /*========== Font weight ==========*/
+    --font-bold: 700;
+    /*========== Shadow ==========*/
+    --box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, .20);
+    /*========== Margenes ==========*/
+    --m-0-25: .25rem;
+    --m-0-5: .5rem;
+    --m-0-75: .75rem;
+    --m-1: 1rem;
+    --m-1-25: 1.25rem;
+    --m-1-5: 1.5rem;
+    --m-2: 2rem;
+    --m-2-5: 2.5rem;
+    /*========== Content size ==========*/
+    --content--width: 25rem;
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: var(--content--width);
+}
+
+.title {
+    width: 100%;
+    margin-bottom: var(--m-0-5);
+}
+
+.title__elem {
+    color: var(--first-color);
+    font-weight: var(--font-bold);
+    font-family: var(--font-family);
+    font-size: var(--title-font-size);
+    width: 100%;
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    padding: var(--m-1);
+}
+
+.list__elem {
+    background-color: var(--first-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-bold);
+    font-size: var(--normal-font-size);
+    color: var(--white);
+    text-align: center;
+    padding: var(--m-0-25);
+    margin: var(--m-0-25);
+    transition: background-color ease-in-out 0.4s;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.list--even {
+    .list__elem {
+        &:nth-child(even) {
+            background-color: var(--alt-color);
+        }
+    }
+}
+
+/* Checkbox */
+
+#changeViewStyleBtn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transform: scale(2);
+
+    &:hover{
+        cursor: pointer;
+    }
+}
