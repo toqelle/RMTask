@@ -1,0 +1,12 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 25rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+.list--even .item:nth-child(even) {
+    background-color: #008001;
+}

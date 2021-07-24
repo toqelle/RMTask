@@ -1,0 +1,11 @@
+.list__item{
+    background-color: #374785;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    margin: .25rem;
+}
+
+.item_list:hover{
+    cursor: pointer;
+}
